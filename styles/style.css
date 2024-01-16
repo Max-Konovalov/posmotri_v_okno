@@ -120,6 +120,7 @@ ol {
     display: flex;
     flex-direction: row;
     width: fit-content;
+    align-items: center;
 }
 
 .search-form__fieldset-title {
@@ -129,8 +130,6 @@ ol {
 }
 
 .search-form__textfield {
-    font-family: inherit;
-    font-size: 18px;
     width: 225px;
     height: 27px;
     background-color: transparent;
@@ -139,12 +138,32 @@ ol {
     border-bottom: 1px solid #fff;
     appearance: none;
     cursor: text;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
 }
 
+.search-form__textfield::placeholder {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Fira Sans Condensed, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
-.search-form__label:has(:focus-visible) {
+.search-form__textfield {
+    outline: none;
+}
+
+.search-form__label:has(:focus-visible:not(:active)) {
     outline: 1px solid;
     outline-offset: 1px;
+}
+
+.search-form__textfield:active {
+    border: 1px solid #fff;
+    outline: none;
 }
 
 .search-form__checkbox-list {
@@ -183,7 +202,6 @@ input[type='checkbox']:checked + span {
     background-position: center;
 }
 
-
 .search-form__label:has(input[type='checkbox']):hover {
 
     text-decoration: underline;
@@ -199,7 +217,6 @@ input[type='checkbox']:checked + span {
 }
 
 .preloader {
-    /*position: absolute;*/
     width: 100%;
     height: 100%;
 }
@@ -211,6 +228,7 @@ input[type='checkbox']:checked + span {
     text-transform: uppercase;
     font-family: Oswald, serif;
 }
+
 
 .content__details {
     width: 100%;
@@ -253,9 +271,6 @@ input[type='checkbox']:checked + span {
 }
 
 .content__list-item {
-    border: none;
-    box-sizing: border-box;
-    padding: 2px;
     cursor: url('/images/custom-cursor.png'), pointer;
 }
 
@@ -271,10 +286,18 @@ input[type='checkbox']:checked + span {
     text-decoration: underline;
 }
 
-/*.content__list-item:focus {*/
-/*    border: 1px solid #FFFFFF;*/
-/*}*/
+.content__card-link {
+    display: block;
+    margin: 2px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 0;
+    cursor: url("/images/custom-cursor.png"), pointer;
+}
 
+.content__card-link:focus-visible {
+    outline: 1px solid #FFF;
+}
 
 .content__video-card {
     display: flex;
@@ -292,10 +315,10 @@ input[type='checkbox']:checked + span {
     color: #FFF;
 }
 
-.content__card-link:focus-visible {
-    border: 1px solid #FFFFFF;
-    border-radius: 0;
-}
+/*.content__card-link:focus-visible {*/
+/*    border: 1px solid #FFFFFF;*/
+/*    border-radius: 0;*/
+/*}*/
 
 .content__video-card-description-container {
     display: flex;
