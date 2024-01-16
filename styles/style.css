@@ -221,6 +221,7 @@ input[type='checkbox']:checked + span {
     height: 100%;
 }
 
+
 .title {
     font-size: 75px;
     font-weight: 700;
