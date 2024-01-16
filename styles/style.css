@@ -9,7 +9,9 @@ html {
 }
 
 .page {
-    padding: 133px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     inline-size: 1200px;
     block-size: 100%;
     margin: auto;
