@@ -59,7 +59,7 @@ ol {
 }
 
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 700;
   font-size: inherit;
   background-color: transparent;
@@ -124,7 +124,9 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-size: 18px;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .search-form__textfield {
@@ -167,11 +169,10 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: block;
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  vertical-align: middle;
   background-color: transparent;
   border: 1px solid #fff;
 }
